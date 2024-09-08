@@ -28,6 +28,8 @@ While creating coordinate arrays, ensure that both arrays have the same size bec
 
 * To enable grid, use `matplotlib.pyplot.grid(True)`
 * To add title, use `matplotlib.pyplot.title()`
+* To label X axis, use `matplotlib.pyplot.xlabel()`
+* To label Y axis, use `matplotlib.pyplot.ylabel()`
 * To display graph, use `matplotlib.pyplot.show()`
 
 
@@ -56,8 +58,8 @@ The `matplotlib.pyplot.pie()` function in matplotlib is used to create a pie cha
 | **textprops**    | Dictionary of properties for the text labels (e.g., font size, color).         |`None`         |
 | **normalize**    | If `True`, normalizes the data so that the pie chart adds up to 1.             |`None`         |
 
-* To add title, use `matplotlib.pyplot.title()`
 * To add legand, use `matplotlib.pyplot.legand()`
+* To add title, use `matplotlib.pyplot.title()`
 * To display graph, use `matplotlib.pyplot.show()`
 
 
@@ -83,6 +85,12 @@ It takes the following arguments:
 | **label**             | Label for the dataset, useful when plotting multiple datasets. | `None`            |
 | **tick_label**        | Labels for the x-axis ticks.                                   | `None`            |
 | **bottom**            | Position of the bottom of the bars (useful for stacked bars).  | 0                 |
+
+* To add title, use `matplotlib.pyplot.title()`
+* To label X axis, use `matplotlib.pyplot.xlabel()`
+* To label Y axis, use `matplotlib.pyplot.ylabel()`
+* To display graph, use `matplotlib.pyplot.show()`
+* To enable grid, use `matplotlib.pyplot.grid(True)`
 
 
 
@@ -113,6 +121,12 @@ It takes the following arguments:
 | **label**             | Label for the histogram, useful when plotting multiple histograms.    | `None`            |
 | **orientation**       | Orientation of the bars ('vertical' or 'horizontal').                 | 'vertical'        |
 | **align**             | Alignment of the bars ('left', 'mid', 'right').                       | 'mid'             |
+
+* To add title, use `matplotlib.pyplot.title()`
+* To label X axis, use `matplotlib.pyplot.xlabel()`
+* To label Y axis, use `matplotlib.pyplot.ylabel()`
+* To display graph, use `matplotlib.pyplot.show()`
+* To enable grid, use `matplotlib.pyplot.grid(True)`
 
 
 
@@ -147,6 +161,12 @@ While creating coordinate arrays, ensure that both arrays have the same size bec
 | **vmax**              | Maximum value for colormap normalization.                         | `None`            |
 | **label**             | Label for the dataset, useful when plotting multiple datasets.    | `None`            |
 
+* To add title, use `matplotlib.pyplot.title()`
+* To label X axis, use `matplotlib.pyplot.xlabel()`
+* To label Y axis, use `matplotlib.pyplot.ylabel()`
+* To display graph, use `matplotlib.pyplot.show()`
+* To enable grid, use `matplotlib.pyplot.grid(True)`
+
 
 
 
@@ -178,6 +198,11 @@ It takes the following arguments:
 | **flierprops**        | Dictionary of properties for the fliers (outliers, e.g., marker size, color).     | `None`        |
 | **medianprops**       | Dictionary of properties for the median line (e.g., color, line width).           | `None`        |
 
+* To add title, use `matplotlib.pyplot.title()`
+* To label X axis, use `matplotlib.pyplot.xlabel()`
+* To enable grid, use `matplotlib.pyplot.grid(True)`
+* To display graph, use `matplotlib.pyplot.show()`
+
 
 
 
@@ -208,6 +233,11 @@ It takes the following arguments:
 | **edgecolor**         | Color of the edge of the shaded area.                          | `None`            |
 | **label**             | Label for the shaded area, useful when plotting multiple datasets. | `None`        |
 
+* To add title, use `matplotlib.pyplot.title()`
+* To label X axis, use `matplotlib.pyplot.xlabel()`
+* To label Y axis, use `matplotlib.pyplot.ylabel()`
+* To display graph, use `matplotlib.pyplot.show()`
+
 
 
 
@@ -236,6 +266,72 @@ It takes the following arguments:
 | **extent**            | Bounding box in data coordinates for the image.                   | `None`            |
 | **alpha**             | Adjusts the transparency of the image.                            | 1.0 (fully opaque)|
 | **norm**              | Normalize instance for colormap normalization.                    | `None`            |
+
+* To add title, use `matplotlib.pyplot.title()`
+* To label X axis, use `matplotlib.pyplot.xlabel()`
+* To label Y axis, use `matplotlib.pyplot.ylabel()`
+* To show colorbar, use `matplotlib.pyplot.colorbar()`
+* To display graph, use `matplotlib.pyplot.show()`
+
+#### Argument list for `interpolation`:
+* `nearest`: Assigns the nearest color without interpolation. Best for discrete data.
+* `bilinear`: Smooth interpolation between points, useful for continuous data.
+* `bicubic`: More complex interpolation, producing smoother results than bilinear.
+* `spline16`: Uses spline interpolation for a high-quality smooth gradient.
+
+#### Argument list for `cmap`:
+
+##### Sequential Colormaps (for ordered data)
+- **`'viridis'`**: A perceptually uniform colormap transitioning from dark purple to yellow.
+- **`'plasma'`**: Transitions from dark purple to bright yellow.
+- **`'inferno'`**: Transitions from black to red and yellow.
+- **`'magma'`**: Transitions from black to red and white.
+- **`'cividis'`**: A perceptually uniform colormap from blue to yellow, suitable for colorblind individuals.
+- **`'Greys'`**: Shades of grey from black to white.
+- **`'Blues'`**: Shades of blue from light to dark.
+- **`'Greens'`**: Shades of green from light to dark.
+- **`'Reds'`**: Shades of red from light to dark.
+- **`'Oranges'`**: Shades of orange from light to dark.
+- **`'Purples'`**: Shades of purple from light to dark.
+- **`'BuPu'`**: Blue to purple gradient.
+- **`'BuGn'`**: Blue to green gradient.
+- **`'YlOrRd'`**: Yellow to red gradient.
+
+##### Diverging Colormaps (for data with a central midpoint)
+- **`'coolwarm'`**: Blue to red gradient with white in the middle.
+- **`'bwr'`**: Blue to white to red gradient.
+- **`'seismic'`**: Similar to `'bwr'` but with more intense color extremes.
+- **`'RdBu'`**: Red to blue gradient.
+- **`'PiYG'`**: Pink to green gradient.
+- **`'PRGn'`**: Purple to green gradient.
+
+##### Cyclic Colormaps (for data that wraps around)
+- **`'twilight'`**: Smooth gradient from purple to green.
+- **`'twilight_shifted'`**: A shifted version of `'twilight'`.
+- **`'hsv'`**: Hue-Saturation-Value colormap with a full spectrum of colors.
+
+##### Qualitative Colormaps (for categorical data)
+- **`'Set1'`**: Bright, distinct colors for categories.
+- **`'Set2'`**: Another set of distinct colors.
+- **`'Set3'`**: Another set with more colors.
+- **`'Paired'`**: Pairs of distinct colors.
+- **`'tab10'`**: 10 distinct colors for categories.
+- **`'tab20'`**: 20 distinct colors.
+- **`'tab20b'`**: Another set of 20 distinct colors.
+- **`'tab20c'`**: Another variant of 20 distinct colors.
+- **`'Pastel1'`**: Soft pastel colors.
+- **`'Pastel2'`**: Another set of pastel colors.
+- **`'Dark2'`**: Dark, distinct colors.
+
+##### Miscellaneous Colormaps
+- **`'rainbow'`**: Full spectrum of rainbow colors.
+- **`'flag'`**: Alternating red, white, blue, and black.
+- **`'prism'`**: Full spectrum of colors in a prism-like effect.
+- **`'ocean'`**: Shades of blue and green, like the ocean.
+- **`'gist_rainbow'`**: Similar to `'rainbow'` but with more vibrant colors.
+- **`'hot'`**: Transitions from black to red, orange, and yellow, simulating heat.
+- **`'cool'`**: Transitions from cyan to magenta, providing a cool color gradient.
+
 
 
 
@@ -267,6 +363,11 @@ It takes the following arguments:
 | **extend**            | Whether to extend the contour lines to the edge of the plot.   | `None`                   |
 | **norm**              | Normalize instance for colormap normalization.                 | `None`                   |
 
+* To add title, use `matplotlib.pyplot.title()`
+* To label X axis, use `matplotlib.pyplot.xlabel()`
+* To label Y axis, use `matplotlib.pyplot.ylabel()`
+* To display graph, use `matplotlib.pyplot.show()`
+
 
 
 
@@ -294,3 +395,22 @@ It takes the following arguments:
 | **stacked**           | If `True`, the areas are stacked; if `False`, areas are plotted separately. | `True`            |
 | **linewidth**         | Width of the line boundaries of the stacks.                                 | 1.0               |
 | **edgecolor**         | Color of the edge of the stacks.                                            | `None`            |
+
+* To add title, use `matplotlib.pyplot.title()`
+* To label X axis, use `matplotlib.pyplot.xlabel()`
+* To label Y axis, use `matplotlib.pyplot.ylabel()`
+* To display graph, use `matplotlib.pyplot.show()`
+
+
+
+
+
+## subplot() function:
+
+**Syntax** : `matplotlib.pyplot.subplot(nrows, ncols, index, **kwargs)`
+* **nrows**: Number of rows in the grid.
+* **ncols**: Number of columns in the grid.
+* **index**: Index of the subplot to be created or accessed. This is a 1-based index, so the first subplot is 1, the second subplot is 2, and so on.
+* ****kwargs**: Additional keyword arguments that can be passed to customize the subplot (e.g., title, xlabel, ylabel).
+
+*NOTE* : Use this function before `matplotlib.pyplot.<plotting functions>()`
