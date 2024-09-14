@@ -26,11 +26,18 @@ While creating coordinate arrays, ensure that both arrays have the same size bec
 | **alpha**                 | Adjusts the transparency of the line.            |1.0 (fully opaque)  |
 | **xlim and ylim**         | Sets the limits for the x-axis and y-axis.       |Determined by data  |
 
-* To enable grid, use `matplotlib.pyplot.grid(True)`
-* To add title, use `matplotlib.pyplot.title()`
-* To label X axis, use `matplotlib.pyplot.xlabel()`
-* To label Y axis, use `matplotlib.pyplot.ylabel()`
-* To display graph, use `matplotlib.pyplot.show()`
+Different Line Styles used:
+
+'solid' 	:`'-'`	
+
+'dotted'	:`':'`	
+
+'dashed'	:`'--'`	
+
+'dashdot'	:`'-.'`	
+
+'None'	    :`''` or `' '`
+
 
 
 
@@ -58,9 +65,7 @@ The `matplotlib.pyplot.pie()` function in matplotlib is used to create a pie cha
 | **textprops**    | Dictionary of properties for the text labels (e.g., font size, color).         |`None`         |
 | **normalize**    | If `True`, normalizes the data so that the pie chart adds up to 1.             |`None`         |
 
-* To add legand, use `matplotlib.pyplot.legand()`
-* To add title, use `matplotlib.pyplot.title()`
-* To display graph, use `matplotlib.pyplot.show()`
+
 
 
 
@@ -74,6 +79,8 @@ It takes the following arguments:
 - **`x`**: Array-like, the categories for the x-axis.
 - **`height`**: Array-like, the heights of the bars (values for the y-axis).
 
+**NOTE** use `.barh()` function to create horizontal bar chart
+
 | Argument              | Description                                                    | Default Value     |
 |-----------------------|----------------------------------------------------------------|-------------------|
 | **width**             | Width of the bars.                                             | 0.8               |
@@ -86,11 +93,7 @@ It takes the following arguments:
 | **tick_label**        | Labels for the x-axis ticks.                                   | `None`            |
 | **bottom**            | Position of the bottom of the bars (useful for stacked bars).  | 0                 |
 
-* To add title, use `matplotlib.pyplot.title()`
-* To label X axis, use `matplotlib.pyplot.xlabel()`
-* To label Y axis, use `matplotlib.pyplot.ylabel()`
-* To display graph, use `matplotlib.pyplot.show()`
-* To enable grid, use `matplotlib.pyplot.grid(True)`
+
 
 
 
@@ -122,11 +125,7 @@ It takes the following arguments:
 | **orientation**       | Orientation of the bars ('vertical' or 'horizontal').                 | 'vertical'        |
 | **align**             | Alignment of the bars ('left', 'mid', 'right').                       | 'mid'             |
 
-* To add title, use `matplotlib.pyplot.title()`
-* To label X axis, use `matplotlib.pyplot.xlabel()`
-* To label Y axis, use `matplotlib.pyplot.ylabel()`
-* To display graph, use `matplotlib.pyplot.show()`
-* To enable grid, use `matplotlib.pyplot.grid(True)`
+
 
 
 
@@ -161,11 +160,7 @@ While creating coordinate arrays, ensure that both arrays have the same size bec
 | **vmax**              | Maximum value for colormap normalization.                         | `None`            |
 | **label**             | Label for the dataset, useful when plotting multiple datasets.    | `None`            |
 
-* To add title, use `matplotlib.pyplot.title()`
-* To label X axis, use `matplotlib.pyplot.xlabel()`
-* To label Y axis, use `matplotlib.pyplot.ylabel()`
-* To display graph, use `matplotlib.pyplot.show()`
-* To enable grid, use `matplotlib.pyplot.grid(True)`
+
 
 
 
@@ -198,10 +193,7 @@ It takes the following arguments:
 | **flierprops**        | Dictionary of properties for the fliers (outliers, e.g., marker size, color).     | `None`        |
 | **medianprops**       | Dictionary of properties for the median line (e.g., color, line width).           | `None`        |
 
-* To add title, use `matplotlib.pyplot.title()`
-* To label X axis, use `matplotlib.pyplot.xlabel()`
-* To enable grid, use `matplotlib.pyplot.grid(True)`
-* To display graph, use `matplotlib.pyplot.show()`
+
 
 
 
@@ -233,10 +225,8 @@ It takes the following arguments:
 | **edgecolor**         | Color of the edge of the shaded area.                          | `None`            |
 | **label**             | Label for the shaded area, useful when plotting multiple datasets. | `None`        |
 
-* To add title, use `matplotlib.pyplot.title()`
-* To label X axis, use `matplotlib.pyplot.xlabel()`
-* To label Y axis, use `matplotlib.pyplot.ylabel()`
-* To display graph, use `matplotlib.pyplot.show()`
+
+
 
 
 
@@ -267,11 +257,7 @@ It takes the following arguments:
 | **alpha**             | Adjusts the transparency of the image.                            | 1.0 (fully opaque)|
 | **norm**              | Normalize instance for colormap normalization.                    | `None`            |
 
-* To add title, use `matplotlib.pyplot.title()`
-* To label X axis, use `matplotlib.pyplot.xlabel()`
-* To label Y axis, use `matplotlib.pyplot.ylabel()`
-* To show colorbar, use `matplotlib.pyplot.colorbar()`
-* To display graph, use `matplotlib.pyplot.show()`
+
 
 #### Argument list for `interpolation`:
 * `nearest`: Assigns the nearest color without interpolation. Best for discrete data.
@@ -350,6 +336,8 @@ It takes the following arguments:
 - **`Y`**: 2D array of y-coordinates.
 - **`Z`**: 2D array of values corresponding to the coordinates in `X` and `Y`.
 
+**NOTE:** `.contourf()` for filled countor plot
+
 ### Additional Parameters in matplotlib.pyplot.contour()
 
 | Argument              | Description                                                    | Default Value            |
@@ -363,10 +351,9 @@ It takes the following arguments:
 | **extend**            | Whether to extend the contour lines to the edge of the plot.   | `None`                   |
 | **norm**              | Normalize instance for colormap normalization.                 | `None`                   |
 
-* To add title, use `matplotlib.pyplot.title()`
-* To label X axis, use `matplotlib.pyplot.xlabel()`
-* To label Y axis, use `matplotlib.pyplot.ylabel()`
-* To display graph, use `matplotlib.pyplot.show()`
+
+
+
 
 
 
@@ -396,21 +383,294 @@ It takes the following arguments:
 | **linewidth**         | Width of the line boundaries of the stacks.                                 | 1.0               |
 | **edgecolor**         | Color of the edge of the stacks.                                            | `None`            |
 
-* To add title, use `matplotlib.pyplot.title()`
-* To label X axis, use `matplotlib.pyplot.xlabel()`
-* To label Y axis, use `matplotlib.pyplot.ylabel()`
-* To display graph, use `matplotlib.pyplot.show()`
+
+
+
+
+ ## 11. Date Time Plot
+
+A Date-Time plot is used to represent data points over time, often visualizing trends, patterns, or fluctuations over a period of time. This type of plot is essential for time series data analysis, such as tracking stock prices, sensor readings, or daily temperature changes.
+
+### `matplotlib.pyplot.plot_date()`
+
+The `matplotlib.pyplot.plot_date()` function is specifically designed to handle date and time data on the x-axis. It allows for easy plotting of time series data where the x-coordinates are date or datetime objects.
+
+It takes the following arguments:
+- **`x`**: Array-like, typically datetime objects representing time points.
+- **`y`**: Array-like, the values corresponding to each time point.
+
+### Additional Parameters in `matplotlib.pyplot.plot_date()`
+
+| Argument              | Description                                                                 | Default Value     |
+|-----------------------|-----------------------------------------------------------------------------|-------------------|
+| **fmt**               | A format string for line and marker style (e.g., 'o', '-', '--').            | `'o'`             |
+| **tz**                | The time zone for the x-axis if the dates are naive.                         | `None`            |
+| **xdate**             | Boolean indicating whether to interpret `x` as dates.                        | `True`            |
+| **ydate**             | Boolean indicating whether to interpret `y` as dates.                        | `False`           |
+| **color**             | Sets the color of the plotted line and markers.                              | `None`            |
+| **marker**            | Sets the marker style for data points.                                       | `None`            |
+| **label**             | Label for the data series (useful for legends).                              | `None`            |
+| **linewidth**         | Width of the plotted line.                                                   | 1.5               |
+| **linestyle**         | Style of the plotted line (e.g., '-', '--', '-.', ':').                      | `'solid'`         |
+
+
+
+
+
+
+#
+
+# Additional functions:
+
+
+##   show() function
+The **`show()`** function in Matplotlib is used to display all the figures or plots that have been created. It renders the visual output of the charts, such as line plots, scatter plots, bar charts, and more, in a window or inline in environments like Jupyter notebooks.
+
+* It does not take any mandatory arguments.
+* It is typically called at the end of plotting commands to ensure the graphs are displayed properly.
+* In Jupyter notebooks, plots often display automatically, but in scripts or programs, plt.show() is needed to explicitly render the plots.
+* Without calling plt.show(), the graphs may not appear, especially in standalone scripts.
+
+
+
+
+
+
+## title() function
+The **`title()`** function in Matplotlib is used to set a title for the current plot or graph. It adds a descriptive text at the top of the figure to help identify or explain the plot.
+
+**Syntax** : `matplotlib.pyplot.title(label, fontdict=None, loc='center', **kwargs)`
+
+### Parameters:
+* `label`: (str) The title text that will appear at the top of the plot.
+* `fontdict`: (dict, optional) A dictionary to customize the font properties, such as font size, color, weight, etc.
+* `loc`: (str, optional) Determines the alignment of the title. Can be:
+    * `'center'` (default)
+    * `'left'`
+    * `'right'`
+* `**kwargs`: Other keyword arguments to style the text (e.g., fontsize, color, etc.).
+
+
+
+
+
+
+
+## xlable() function:
+The **`xlabel()`** function is used to set the label for the x-axis of a plot.
+
+**Syntax** : `matplotlib.pyplot.xlabel(xlabel, fontdict=None, labelpad=None, **kwargs)`
+### Parameters:
+
+`xlabel`: (str) The label text for the x-axis.
+`fontdict`: (dict, optional) A dictionary to customize the font properties, such as font size, color, weight, etc.
+`labelpad`: (float, optional) Spacing in points between the label and the x-axis.
+`**kwargs`: Additional arguments to control the appearance of the text (e.g., color, fontsize).
+
+## ylable() function:
+The **`ylabel()`** function is used to set the label for the y-axis of a plot.
+
+**Syntax** : `matplotlib.pyplot.ylabel(ylabel, fontdict=None, labelpad=None, **kwargs)`
+
+### Parameters:
+
+* `ylabel`: (str) The label text for the y-axis.
+* `fontdict`: (dict, optional) A dictionary to customize the font properties, such as font size, color, weight, etc.
+* `labelpad`: (float, optional) Spacing in points between the label and the y-axis.
+* `**kwargs`: Additional arguments to control the appearance of the text (e.g., color, fontsize).
 
 
 
 
 
 ## subplot() function:
+The `subplot()` function in Matplotlib is used to create multiple subplots in a single figure. It divides the figure into a grid of subplots, and allows you to specify which subplot to activate.
 
 **Syntax** : `matplotlib.pyplot.subplot(nrows, ncols, index, **kwargs)`
-* **nrows**: Number of rows in the grid.
-* **ncols**: Number of columns in the grid.
-* **index**: Index of the subplot to be created or accessed. This is a 1-based index, so the first subplot is 1, the second subplot is 2, and so on.
-* ****kwargs**: Additional keyword arguments that can be passed to customize the subplot (e.g., title, xlabel, ylabel).
+### Parameters:
+* `nrows`: Number of rows in the grid.
+* `ncols`: Number of columns in the grid.
+* `index`: Index of the subplot to be created or accessed. This is a 1-based index, so the first subplot is 1, the second subplot is 2, and so on.
+* `**kwargs`: Additional keyword arguments that can be passed to customize the subplot (e.g., title, xlabel, ylabel).
 
 *NOTE* : Use this function before `matplotlib.pyplot.<plotting functions>()`
+
+
+
+
+
+## annotate() function:
+The plt.annotate() function in Matplotlib is used to add text annotations at specific points on a plot. It allows you to highlight or explain certain data points by attaching descriptive text to them.
+
+**Syntax** : `matplotlib.pyplot.annotate(text, xy, xytext=None, arrowprops=None, **kwargs)`
+
+### Parameters:
+
+* `text`: (str) The text to display as the annotation.
+* `xy`: (tuple) The (x, y) coordinates of the point being annotated.
+* `xytext`: (tuple, optional) The (x, y) coordinates where the annotation text should be displayed. If not provided, the text is displayed at the same location as xy.
+* `arrowprops`: (dict, optional) A dictionary to customize the appearance of the arrow that connects the text to the annotated point. This can include properties like arrowstyle, color, linewidth, etc.
+* `**kwargs`: Additional keyword arguments to style the text (e.g., fontsize, color, weight).
+
+
+
+
+
+
+## tight_layout() function:
+The `tight_layout()` function in Matplotlib is used to automatically adjust the subplot parameters to give specified padding and prevent overlaps between plot elements. It helps to ensure that all subplots fit into the figure area without any clipping.
+
+**Syntax**:  `matplotlib.pyplot.tight_layout(pad=1.08, h_pad=None, w_pad=None, rect=None)`
+### Parameters:
+* `pad`: (float, optional) Padding between the edges of the figure and the edges of subplots, as a fraction of the font size. Default is 1.08.
+* `h_pad`: (float, optional) Padding (height) between rows of subplots. If None, it defaults to pad. Default is None.
+* `w_pad`: (float, optional) Padding (width) between columns of subplots. If None, it defaults to pad. Default is None.
+* `rect`: (tuple, optional) A rectangle (left, bottom, right, top) in normalized figure coordinates that specifies the area where subplots should fit. The default is None, which means the full figure area is used.
+* `thin`: (bool, optional) If True, uses a thinner algorithm for layout adjustments. Default is False.
+
+
+
+
+
+
+## errorbar() function:
+The `plt.errorbar()` function in Matplotlib is used to create a plot with error bars, which are used to represent the uncertainty or variability of the data points. Error bars are helpful for visualizing the precision of measurements or the spread of data.
+
+**Syntax**:  `matplotlib.pyplot.errorbar(x, y, yerr=None, xerr=None, fmt='o', ecolor='black', elinewidth=1, capsize=3, capthick=1, **kwargs)`
+
+### Parameters:
+* `x`: (array-like) The x-coordinates of the data points.
+* `y`: (array-like) The y-coordinates of the data points.
+* `yerr`: (array-like, optional) The vertical error (uncertainty) for each data point. It can be a single value or an array of the same length as y.
+* `xerr`: (array-like, optional) The horizontal error (uncertainty) for each data point. It can be a single value or an array of the same length as x.
+* `fmt`: (str, optional) The format string for the data points (e.g., 'o' for circles, '-' for lines). Default is 'o'.
+* `ecolor`: (str, optional) The color of the error bars. Default is 'black'.
+elinewidth: (float, optional) The width of the error bars. Default is 1.
+* `capsize`: (float, optional) The size of the caps at the end of the error bars. Default is 3.
+* `capthick`: (float, optional) The thickness of the caps at the end of the error bars. Default is 1.
+* `**kwargs`: Additional keyword arguments to customize the appearance of the plot (e.g., color, linestyle, markersize).
+
+
+
+
+
+
+## savefig() function:
+The savefig() function in Matplotlib is used to save the current figure to a file. You can save the figure in various formats such as PNG, PDF, SVG, EPS, etc.
+
+**Syntax**: `matplotlib.pyplot.savefig(fname, dpi=None, bbox_inches=None, pad_inches=0.1, transparent=False, **kwargs)`
+
+### Parameters:
+* `fname`: (str or Path-like) File name or path to save the figure to. It can include the file extension to specify the format (e.g., `plot.png`).
+* `dpi`: (int, optional) Dots per inch. This controls the resolution of the saved figure. Default is `None`, which uses the figure's current DPI setting.
+* `bbox_inches`: (str or Bbox, optional) Bounding box in inches for the figure. If set to `'tight'`, it will fit the bounding box to the figure's contents.
+* `pad_inches`: (float, optional) Padding around the figure when `bbox_inches` is set to 'tight'. Default is 0.1.
+* `transparent`: (bool, optional) If `True`, the figure background will be transparent. Default is `False`.
+* `**kwargs`: Additional keyword arguments passed to the underlying `backend`.
+
+
+
+
+
+
+## plt.grid():
+# Grid Function in Matplotlib
+
+The `grid()` function in Matplotlib is used to control the visibility and appearance of grid lines in a plot. Grid lines are useful for enhancing the readability of plots by making it easier to interpret the values.
+**Syntax:**   `matplotlib.pyplot.grid(b=None, which='major', axis='both', **kwargs)`
+
+### Parameters:
+* `b`: (bool, optional) Whether to display the grid lines. If `True`, the grid is enabled; if `False`, it is disabled. If `None`, it toggles the grid state.
+* `which`: (str, optional)
+Determines which grid lines to apply the function to. Options are:
+    * `'major'` (default): Major grid lines.
+    * `'minor'`: Minor grid lines.
+    * `'both'`: Both major and minor grid lines.
+* `axis`: (str, optional)
+Specifies which axis to apply the grid lines to. Options are:
+    * `'both'` (default): Both x and y axes.
+    * `'x'`: Only x-axis.
+    * `'y'`: Only y-axis.
+* `**kwargs`: Additional keyword arguments to customize grid line appearance. Examples include:
+    * `color`: Color of the grid lines.
+    * `linestyle`: Style of the grid lines (e.g., '-', '--', ':').
+    * `linewidth`: Width of the grid lines.
+
+
+
+
+
+
+## xticks() and yticks() functions
+
+The `xticks()` and `yticks()` functions in Matplotlib are used to customize the tick locations and labels on the x-axis and y-axis, respectively. These functions allow you to define specific tick positions, customize tick labels, and style the ticks.
+
+**Syntax**
+`matplotlib.pyplot.xticks(ticks=None, labels=None, **kwargs)`
+`matplotlib.pyplot.yticks(ticks=None, labels=None, **kwargs)`
+
+### Parameters
+
+* `ticks`: (array-like, optional)
+    * Specifies the positions of the ticks on the axis.
+    * If None, it uses the default tick locations.
+* `labels`: (array-like, optional)
+    * Defines the labels for the ticks. The length of labels should match the number of ticks.
+    * f None, default tick labels (numbers) will be used.
+* `**kwargs`: Additional keyword arguments to style the tick labels. Some common options include:
+    * `fontsize`: Adjusts the size of the tick labels.
+    * `rotation`: Rotates the tick labels to a specific angle (useful for crowded labels).
+    * `color`: Changes the color of the tick labels.
+    * `fontweight`: Adjusts the weight of the font (e.g., bold).
+
+
+
+
+
+
+
+## xlim() and ylim() functions
+
+The `xlim()` and `ylim()` functions in Matplotlib are used to set or get the limits of the x-axis and y-axis, respectively. These functions help in defining the range of data displayed on the axes, allowing you to zoom in or out of specific portions of your plot.
+
+**Syntax**
+`matplotlib.pyplot.xlim(left=None, right=None)`
+`matplotlib.pyplot.ylim(bottom=None, top=None)`
+
+### Parameters
+
+* `left`, `right` (for `xlim`):
+    * `left`: (float, optional) The minimum limit of the x-axis.
+    * `right`: (float, optional) The maximum limit of the x-axis.
+    * If None, the limit will not be changed.
+* `bottom`, `top` (for `ylim`):
+    * `bottom`: (float, optional) The minimum limit of the y-axis.
+    * `top`: (float, optional) The maximum limit of the y-axis.
+    * If None, the limit will not be changed.
+
+
+
+
+
+
+## gca() function
+**Get Current Axes**
+
+The gca() function stands for Get Current Axes. It returns the current active Axes instance in the current Figure. If no axes exist in the current figure, it creates one.
+
+**Syntax:** `ax = plt.gca()`
+
+
+
+
+
+
+## gcf() function
+**Get Current Figure**
+The gcf() function stands for Get Current Figure. It returns the current active Figure instance. If no figure exists, it creates a new one.
+
+**Syntax:** `fig = plt.gcf()`
+
+
+
+
