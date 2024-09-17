@@ -1,4 +1,4 @@
-# Knowledge Checkpoints
+# Matplotlib Library Knowledge Checkpoints 
 
 ## 1. Line Chart
 A line chart, also known as a line graph, is a type of chart used to visualize data points connected by straight lines. It is commonly used to track changes over time or to show trends in a continuous data set. The x-axis typically represents the time intervals or categories, while the y-axis represents the values associated with each interval or category.
